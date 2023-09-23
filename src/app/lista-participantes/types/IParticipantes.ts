@@ -3,10 +3,10 @@ export interface IParticipantes {
     foto: string;
     Nombre: string;
     Apellido: string;
-    Descripción: string;
+    Descripcion: string;
     Actividad: string;
     Hora_entrada: string;
     Hora_salida: string;
-    Clasificación: string;
-    Estado: "Activo" | "Inactivo";
+    Clasificacion: string;
+    Estado: boolean;
 }

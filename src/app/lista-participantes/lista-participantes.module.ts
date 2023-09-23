@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ListaParticipantesPageRoutingModule } from './lista-participantes-routing.module';
 
 import { ListaParticipantesPage } from './lista-participantes.page';
+import { MostrarParticipanteComponent } from './mostrar-participante/mostrar-participante.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ListaParticipantesPage } from './lista-participantes.page';
     IonicModule,
     ListaParticipantesPageRoutingModule
   ],
-  declarations: [ListaParticipantesPage]
+  declarations: [ListaParticipantesPage,MostrarParticipanteComponent]
 })
 export class ListaParticipantesPageModule {}

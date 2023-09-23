@@ -1,0 +1,32 @@
+<ion-card [id]="participante.ID">
+  <img [src]="participante.foto">
+  <ion-card-header>
+    <ion-card-title>
+      {{ participante.Nombre }} {{participante.Apellido}}
+    </ion-card-title>
+    <ion-card-subtitle>
+      {{ participante.Descripcion }}
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        Actividad a entrar: {{ participante.Actividad }}
+      </ion-item>
+      <ion-item>
+        Horario de entrada: {{ participante.Hora_entrada }} Horario de salida: {{ participante.Hora_salida }}
+      </ion-item>
+      <ion-item>
+        Clasificación de entrada: {{ participante.Clasificacion }}
+      </ion-item>
+      <ion-item >
+        Estado: <h2 *ngIf="participante.Estado === true" style="color: green;"> Activo</h2>
+        <h2 *ngIf="participante.Estado === false" style="color: red;"> Inactivo</h2>
+      </ion-item>
+      <ion-item>
+        <a  slot="start" (click)="cambiarVerde()">Cambiar a verde</a>
+        <a  slot="end" (click)="cambiarRojo()">Cambiar a rojo</a>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
